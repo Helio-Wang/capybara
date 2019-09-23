@@ -1,0 +1,123 @@
+.. |EUCALPYT| image:: resources/eucalypt.png
+   :height: 1em
+   :target: http://eucalypt.gforge.inria.fr/
+
+.. _Standard enumeration:
+
+********************
+Standard enumeration
+********************
+
+.. contents:: Table of Contents
+
+Loading an input file
+=====================
+
+The input format is the same as for |eucalpyt|. 
+:download:`Here is an example input file <resources/AS.nex>`.
+
+
+
+After loading a file with the :guilabel:`Open` button, the input file information is displayed, and
+the other buttons become available:
+
+.. figure:: resources/Capture1.png
+
+.. admonition:: Cost vector
+
+   * Before clicking on the :guilabel:`Count` or :guilabel:`Enumerate` button, choose the desired cost vector.
+   * All four numbers must be **integers**.
+   * Floating point numbers will be rounded towards zero (3.6 becomes 3, -3.6 becomes -3).
+   * Different cost vectors can be used, for example, across differents runs of the counting tasks, without needing to re-load the input file.
+
+
+.. Tip::
+    Most buttons and boxes have help messages (tooltip). These will appear when the mouse cursor moves over an item. 
+
+Counting the number of solutions
+================================
+
+The user can check multiple boxes in **Task** then click on the :guilabel:`Count` button for the results to be printed directly in the **Output** area. 
+
+It is possible to save the on-screen text output to a file using the :guilabel:`Save` button.
+
+
+Here is the output of counting all four tasks on the :download:`example input <resources/AS.nex>`: ::
+
+    ===============
+    Job started at 2019-09-20 15:24:52
+    Cost vector: (-1, 1, 1, 1)
+    ------
+    Task 1: Counting the number of solutions (cyclic or acyclic)...
+    Total number of solutions = 18
+    ------
+    Task 2: Counting the number of solutions grouped by event vectors...
+    1: [8, 1, 6, 2] of size 4
+    2: [9, 1, 5, 4] of size 2
+    3: [9, 0, 6, 4] of size 4
+    4: [8, 0, 7, 2] of size 8
+    Total number of event vectors = 4
+    Total number of solutions = 18
+    ------
+    Task 3: Counting the number of event partitions...
+    Total number of event partitions = 4
+    ------
+    Task 4: Counting the number of strong equivalence classes...
+    Total number of strong equivalence classes = 4
+    ------
+    Optimal cost = 1.0
+    ------
+    Job finished at 2019-09-20 15:24:52
+    Time elapsed: 0.71 s
+    ===============
+
+
+Listing solutions
+=================
+
+Use the :guilabel:`Enumerate` button for listing solutions to a file that can be used for analaysis or visualization.
+Unlike the :guilabel:`Count` button, it allows only one task box to be checked at a time.
+
+After choosing the output file name, the user selects additional options, depending on the task. Once the additional options are confirmed, the computation starts automatically, and a progress bar pops out. It is possible to stop the computation at anytime by closing the progress bar.
+
+
+Note that the on-screen text output (human-readable trace of computational tasks) can still be saved using the :guilabel:`Save` button.
+
+
+Enumeration tasks T1 and T2
+---------------------------
+
+The output is in the same format as the output of |eucalpyt|. And just like in |eucalpyt|, the user can choose the maximum number of solutions that she likes to enumerate.
+
+For the task T1 (all optimal reconciliations), it is also possible to keep only the acyclic reconciliations.
+
+Here is an example of the on-screen output when this option is chosen, for :download:`another input file <resources/SFC.nex>` and cost vector (0,1,1,1): ::
+
+    ===============
+    Job started at 2019-09-20 19:40:04
+    Cost vector: (0, 1, 1, 1)
+    Task 1: Enumerate acyclic solutions...
+    ------
+    Number of acyclic solutions = 144 out of 184
+    Optimal cost = 11.0
+    Output written to C:/Users/Public/Test/output.txt
+    ------
+    Job finished at 2019-09-20 19:40:05
+    Time elapsed: 0.63 s
+    ===============
+
+
+Enumeration tasks T3 and T4
+---------------------------
+
+There are two output types:
+
+.. figure:: resources/Capture2.png
+   
+- If the first output type `"labels only"` is chosen, the result will be compatible with the `new visualization tool`_.
+
+- If the second output type is chosen, the result will be compatible with the `the original viewer <http://eucalypt.gforge.inria.fr/viewer.html>`__ for |eucalpyt|.
+
+.. _new visualization tool: visualization.html
+
+
