@@ -6,7 +6,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'NewEucalypt'
+project = 'Quokka'
 copyright = '2019, Hélio Wang'
 author = 'Hélio Wang'
 
@@ -60,7 +60,7 @@ html_theme_options = {
     'logo_only': True
 }
 html_theme_path = ["../.."]
-html_logo = "demo/static/logo-wordmark-light.svg"
+html_logo = "resources/logo.png"
 html_show_sourcelink = True
 
 htmlhelp_basename = slug

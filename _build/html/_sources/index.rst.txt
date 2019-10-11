@@ -3,8 +3,15 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to NewEucalypt's documentation!
+.. |EUCALPYT| image:: resources/eucalypt.png
+   :height: 1em
+   :target: http://eucalypt.gforge.inria.fr/
+
+
+Welcome to Quokka's documentation!
 =======================================
+
+Quokka has some features in common with |EUCALPYT| but also many new features!
 
 .. toctree::
    :caption: Documentation
