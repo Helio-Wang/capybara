@@ -198,7 +198,7 @@ There are two output types:
    
 - If the first output type `"labels only"` is chosen, the result will be compatible with the `new visualization tool Quokka Viewer`_.
 
-- If the second output type `"reconciliation"`is chosen, the result will be compatible with the `the original viewer <http://eucalypt.gforge.inria.fr/viewer.html>`__ for |eucalpyt|.
+- If the second output type `"reconciliation"` is chosen, the result will be compatible with the `the original viewer <http://eucalypt.gforge.inria.fr/viewer.html>`__ for |eucalpyt|.
 
 .. _new visualization tool Quokka Viewer: visualization.html
 
