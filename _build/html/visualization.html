@@ -153,18 +153,21 @@
             
   <div class="section" id="output-visualization">
 <span id="id1"></span><h1>Output visualization<a class="headerlink" href="#output-visualization" title="Permalink to this headline">¶</a></h1>
-<p>For visualizating reconciliations (parasite tree drawn on top of the host tree),
+<p>For visualizating reconciliations (symbiont tree drawn on top of the host tree),
 use <a class="reference external" href="http://eucalypt.gforge.inria.fr/viewer.html">the original viewer</a> for <a class="reference external" href="http://eucalypt.gforge.inria.fr/"><img alt="EUCALPYT" src="_images/eucalypt.png" style="height: 1em;" /></a>.</p>
 <p>For visualizating event partitions or equivalence classes (colorings of the parasite tree with animation),
 use the <a class="reference external" href="https://observablehq.com/&#64;heliow/tree-viewer">new animated web tool Quokka Viewer</a>.</p>
 <p>The Quokka visualizer tool takes two input formats generated from the third tab <em>Convert enumeration files for visualization</em> of the main Quokka tool:</p>
-<ul class="simple">
-<li><p>File input (DOT format) can be saved into the filesystem by clicking the <span class="guilabel">Save</span> button.</p></li>
-<li><p>Plain text input can be copied into the user’s clipboard by clicing the <span class="guilabel">Copy</span> button.</p></li>
+<ul>
+<li><p>File input (DOT format) can be saved into the filesystem by clicking the <span class="guilabel">Save</span> button. This file needs to be uploaded into Quokka viewer
+after selecting the first upload method.</p></li>
+<li><p>Plain text input can be copied into the user’s clipboard by clicing the <span class="guilabel">Copy</span> button. Then the clipboard content can be pasted into Quokka viewer.</p>
+<p>Note that the text area for copy-and-paste is hidden by default, and will only appear after the user selects the second upload method <em>Copy and paste text</em>.</p>
+</li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>When the app closes, the clipboard content will also be cleared.</p>
+<p>When the Quokka app closes, the clipboard content will also be cleared. Therefore, if you choose the second upload method, <em>do not</em> close the main app while using the viewer.</p>
 </div>
 </div>
 
