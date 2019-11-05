@@ -35,4 +35,3 @@ If the cyclicity filter is applied, the output will contain a certain number of 
 among the 60 second-optimal solutions. This number varies each time the program restarts, and it might be zero.
 
 
-

@@ -92,6 +92,3 @@ There are 4 event partitions on :download:`this example input file <resources/AS
 .. figure:: resources/treesAnimation(3).png
 
 
-
-
-

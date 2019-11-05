@@ -24,11 +24,11 @@ from sphinx.locale import _
 from sphinx_rtd_theme import __version__
 
 
-project = u'Quokka'
+# project = u'Quokka'
 slug = re.sub(r'\W+', '-', project.lower())
 # version = __version__
 # release = __version__
-author = u'Helio Wang & contributors'
+# author = u'Helio Wang & contributors'
 # copyright = author
 
 extensions = [
