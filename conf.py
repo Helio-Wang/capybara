@@ -24,7 +24,7 @@ from sphinx.locale import _
 from sphinx_rtd_theme import __version__
 
 
-# project = u'Read the Docs Sphinx Theme'
+project = u'Quokka'
 slug = re.sub(r'\W+', '-', project.lower())
 # version = __version__
 # release = __version__
@@ -37,7 +37,6 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.mathjax',
     'sphinx.ext.viewcode',
-    'sphinxcontrib.httpdomain',
     'sphinx_rtd_theme',
 ]
 templates_path = ['_templates']
