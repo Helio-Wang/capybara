@@ -2,13 +2,68 @@
    :height: 1em
    :target: http://eucalypt.gforge.inria.fr/
 
-.. _Standard enumeration:
+.. _Optimal enumeration:
 
-********************
-Standard enumeration
-********************
+*******************
+Optimal enumeration
+*******************
 
 .. contents:: Table of Contents
+
+.. _Enumeration tasks:
+
+Definitions of tasks
+====================
+
+By choosing the option *Standard counting and enumeration* in Quokka, the user can either count or list one of the following:
+
+
+For a given input file and a given cost vector, let **S** be the set containing all reconciliations of minimum cost (cyclic or acyclic).
+
+Task T1: All solutions
+----------------------
+
+:guilabel:`Count`: size of **S**.
+
+:guilabel:`Enumerate`: the set **S**.
+
+Task T2: Event vectors
+----------------------
+
+:guilabel:`Count`: number of different event vectors in **S**.                     
+
+:guilabel:`Enumerate`: all different event vectors in **S**.
+                                                            
+The **event vector* of a reconciliation is a vector of four integers representing the number of occurrences of cospeciation, duplication, host-switch, and loss events.                      
+
+Two reconciliations have the same event vectors if the numbers of each event are the same.                        
+
+Task T3: Event partitions
+-------------------------
+
+:guilabel:`Count`: number of different event partitions in **S**.
+
+:guilabel:`Enumerate`: all different event partitions in **S**.
+
+The **event partition** of a reconciliation is a partition of the internal nodes of the symbiont tree
+into three subsets: cospeciation, duplicaiton, and host-switch nodes.           
+
+Two reconciliations have the same event partitions if, for each node in the symbiont tree,
+the assigned events (cospeciation, duplication, host-switch) are the same, regardless of the hosts.
+
+Task T4: Equivalence classes
+----------------------------
+
+:guilabel:`Count`: number of equivalence classes in **S**.
+
+:guilabel:`Enumerate`: all equivalence classes in **S**.
+
+Two reconciliations are considered **equivalent** if, for each node in the symbiont tree,
+the assigned events (cospeciation, duplication, host-switch) are the same, moreover, the assigned hosts
+are also the same except when the event is a host-switch.
+
+
+.. _Enumeration input:
 
 Loading an input file
 =====================
@@ -36,8 +91,8 @@ the other buttons become available:
      The user can add a folder to favorites using drag and drop to have quicker access in the futur.
    - Not sure what an option means? Most buttons and boxes have help messages (tooltip). These will appear when the mouse cursor moves over an item. 
 
-Counting the number of solutions
-================================
+Counting
+========
 
 Basic usage
 -----------
@@ -45,43 +100,6 @@ Basic usage
 The user can check multiple boxes in **Task** then click on the :guilabel:`Count` button for the results to be printed directly in the **Output** area. 
 
 It is possible to save the on-screen text output to a file using the :guilabel:`Save` button.
-
-Meaning of tasks
-----------------
-
-For a given input file and a given cost vector, let **S** be the set containing all reconciliations of minimum cost (cyclic or acyclic).
-
-
-The exact meaning of :guilabel:`Count` depending on the chosen task is summarized below:
-
-
-Task T1: All solutions
-    Size of **S**.
-
-Task T2: T2: Event vectors
-    Number of different event vectors in **S**.                     
-                                                                
-    The *event vector* of a reconciliation is a vector of four integers         
-    representing the number of occurrences of cospeciation,         
-    duplication, host-switch, and loss events.                      
-
-    Two reconciliations have the same event vectors if the numbers of each event are the same.                        
-
-Task T3: Event partitions
-    Number of different event partitions in **S**.
-
-    The *event partition* of a reconciliation is a partition of the internal nodes of the symbiont tree
-    into three subsets: cospeciation, duplicaiton, and host-switch nodes.           
-
-    Two reconciliations have the same event partitions if, for each node in the symbiont tree,
-    the assigned events (cospeciation, duplication, host-switch) are the same, regardless of the hosts.
-
-Task T4: Equivalence classes
-    Number of equivalence classes in **S**.
-
-    Two reconciliations are considered equivalent if, for each node in the symbiont tree,
-    the assigned events (cospeciation, duplication, host-switch) are the same, moreover, the assigned hosts
-    are also the same except when the event is a host-switch.
     
 
 Example
@@ -117,13 +135,13 @@ Here is the output of all four counting tasks on the :download:`example input <r
     ===============
 
 
-Listing solutions to a file
-===========================
+Listing
+=======
 
 Basic usage
 -----------
 
-Use the :guilabel:`Enumerate` button for listing solutions to a file that can be used for analaysis or visualization.
+Use the :guilabel:`Enumerate` button for listing solutions to a file that can be used for analysis or visualization.
 Unlike the :guilabel:`Count` button, it allows only one task box to be checked at a time.
 
 After choosing the output file name, the user selects additional options, depending on the task. Once the additional options are confirmed, the computation starts automatically, and a progress bar pops out. It is possible to stop the computation at anytime by closing the progress bar (the program may freeze for a few seconds).
@@ -131,40 +149,6 @@ After choosing the output file name, the user selects additional options, depend
 
 Note that the on-screen text output (human-readable trace of computational tasks) can still be saved using the :guilabel:`Save` button.
 
-
-Meaning of tasks
-----------------
-
-Recall that **S** is the set containing all reconciliations of minimum cost (cyclic or acyclic).
-
-
-The meaning of :guilabel:`Enumerate` depending on the chosen task is summarized below:
-
-
-Task T1: All solutions
-    List all reconciliations in **S**.
-
-Task T2: T2: Event vectors
-    List all different event vectors in **S**, and for each event vector, one reconcliation in **S**.
-
-    There can be many reconciliations (cyclic or acyclic) having the same event vector as the 
-    ones in the output (cyclic or acyclic).                                                                 
-
-Task T3: Event partitions
-    Number of different event partitions in **S**.
-
-    The *event partition* of a reconciliation is a partition of the internal nodes of the symbiont tree
-    into three subsets: cospeciation, duplicaiton, and host-switch nodes.           
-
-    Two reconciliations have the same event partitions if, for each node in the symbiont tree,
-    the assigned events (cospeciation, duplication, host-switch) are the same, regardless of the hosts.
-
-Task T4: Equivalence classes
-    Number of equivalence classes in **S**.
-
-    Two reconciliations are considered equivalent if, for each node in the symbiont tree,
-    the assigned events (cospeciation, duplication, host-switch) are the same, moreover, the assigned hosts
-    are also the same except when the event is a host-switch.
     
 Options for tasks T1 and T2
 ---------------------------
@@ -196,9 +180,19 @@ There are two output types:
 
 .. figure:: resources/Capture2.png
    
-- If the first output type `"labels only"` is chosen, the result will be compatible with the `new visualization tool Quokka Viewer`_.
+**Labels only**
 
-- If the second output type `"reconciliation"` is chosen, the result will be compatible with the `the original viewer <http://eucalypt.gforge.inria.fr/viewer.html>`__ for |eucalpyt|.
+   If the first output type `"labels only"` is chosen, the result will be compatible with the `new visualization tool Quokka Viewer`_.
+
+   **Task T3**: Each event partition is represented by the assignment, to each internal symbiont node, of one of the three events.
+
+   **Task T4**: Each equivalence class is represented by the assignment, to each internal symbiont node, of one of the three events, and the assignment of a host hame to each symbiont node with non-host-switch event.
+
+**Reconciliation**
+
+   If the second output type `"reconciliation"` is chosen, the result will be compatible with the `the original viewer <http://eucalypt.gforge.inria.fr/viewer.html>`__ for |eucalpyt|. 
+
+   Note that in this case, the output is only one reconciliation chosen arbitrarily among the potentially many (cyclic or acyclic) reconciliations having the same event partition or belonging in the same equivalence class.
 
 .. _new visualization tool Quokka Viewer: visualization.html
 

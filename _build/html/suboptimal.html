@@ -24,7 +24,7 @@
         <script type="text/javascript" src="_static/jquery.js"></script>
         <script type="text/javascript" src="_static/underscore.js"></script>
         <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -36,7 +36,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Output visualization" href="visualization.html" />
-    <link rel="prev" title="Standard enumeration" href="enumeration.html" /> 
+    <link rel="prev" title="Optimal enumeration" href="enumeration.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -85,7 +85,7 @@
             
               <p class="caption"><span class="caption-text">Documentation</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="enumeration.html">Standard enumeration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="enumeration.html">Optimal enumeration</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Suboptimal enumeration</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#basic-usage">Basic usage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#example">Example</a></li>
@@ -157,8 +157,8 @@
            <div itemprop="articleBody">
             
   <div class="section" id="suboptimal-enumeration">
-<h1>Suboptimal enumeration<a class="headerlink" href="#suboptimal-enumeration" title="Permalink to this headline">¶</a></h1>
-<p>The input format is the same as for <a class="reference internal" href="enumeration.html#standard-enumeration"><span class="std std-ref">Standard enumeration</span></a>.</p>
+<span id="id1"></span><h1>Suboptimal enumeration<a class="headerlink" href="#suboptimal-enumeration" title="Permalink to this headline">¶</a></h1>
+<p>The input format is the same as for <a class="reference internal" href="enumeration.html#optimal-enumeration"><span class="std std-ref">Optimal enumeration</span></a> (see <a class="reference internal" href="enumeration.html#enumeration-input"><span class="std std-ref">Loading an input file</span></a>).</p>
 <div class="section" id="basic-usage">
 <h2>Basic usage<a class="headerlink" href="#basic-usage" title="Permalink to this headline">¶</a></h2>
 <p>Consider all reconciliations of a given input <strong>ordered by cost</strong> in a list, then the K-best solutions is the first K
@@ -169,14 +169,14 @@ than the number of optimal solutions.</p>
 </div>
 <div class="section" id="example">
 <h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
-<p>For <a class="reference download internal" download="" href="_downloads/9716c7d08c73ba9ab111234d0526ef66/SFC.nex"><code class="xref download docutils literal notranslate"><span class="pre">this</span> <span class="pre">input</span> <span class="pre">file</span></code></a> and cost vector (0,1,2,1), there are 40 solutions
+<p>For <a class="reference download internal" download="" href="_downloads/5b96ebae1116ce098bcf4ed560bb634b/SFC.nex"><code class="xref download docutils literal notranslate"><span class="pre">this</span> <span class="pre">input</span> <span class="pre">file</span></code></a> and cost vector (0,1,2,1), there are 40 solutions
 having the optimal cost 21 (none of which is acyclic), and 396 solutions having the second-optimal cost 22 (146 are acyclic).</p>
 <p>By fixing K = 100 (without filtering by cyclicity), the output will contain 100 solutions. The first 40 are the optimal
 solutions, and the next 60 are chosen arbitrarily among the 396 second-optimal solutions.</p>
 <p>The choice of these 60 solutions are arbitrary, meaning that if the user closes and restarts the program,
 the output may be different in spite of using exactly the same input.</p>
 <p>If the cyclicity filter is applied, the output will contain a certain number of acyclic solutions: it’s the number of acyclic solutions
-among the 60 second-optimal solutions, which can vary each time the program restarts.</p>
+among the 60 second-optimal solutions. This number varies each time the program restarts, and it might be zero.</p>
 </div>
 </div>
 
@@ -191,7 +191,7 @@ among the 60 second-optimal solutions, which can vary each time the program rest
         <a href="visualization.html" class="btn btn-neutral float-right" title="Output visualization" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="enumeration.html" class="btn btn-neutral float-left" title="Standard enumeration" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="enumeration.html" class="btn btn-neutral float-left" title="Optimal enumeration" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

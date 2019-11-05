@@ -1,8 +1,10 @@
+.. _Suboptimal enumeration:
+
 **********************
 Suboptimal enumeration
 **********************
 
-The input format is the same as for :ref:`Standard enumeration`. 
+The input format is the same as for :ref:`Optimal enumeration` (see :ref:`Enumeration input`). 
 
 Basic usage
 -----------
@@ -30,7 +32,7 @@ The choice of these 60 solutions are arbitrary, meaning that if the user closes 
 the output may be different in spite of using exactly the same input.
 
 If the cyclicity filter is applied, the output will contain a certain number of acyclic solutions: it's the number of acyclic solutions
-among the 60 second-optimal solutions, which can vary each time the program restarts.
+among the 60 second-optimal solutions. This number varies each time the program restarts, and it might be zero.
 
 
 

@@ -24,7 +24,7 @@
         <script type="text/javascript" src="_static/jquery.js"></script>
         <script type="text/javascript" src="_static/underscore.js"></script>
         <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -35,7 +35,7 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Standard enumeration" href="enumeration.html" /> 
+    <link rel="next" title="Optimal enumeration" href="enumeration.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -84,7 +84,7 @@
             
               <p class="caption"><span class="caption-text">Documentation</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="enumeration.html">Standard enumeration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="enumeration.html">Optimal enumeration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="suboptimal.html">Suboptimal enumeration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="visualization.html">Output visualization</a></li>
 </ul>
@@ -153,14 +153,25 @@
             
   <div class="section" id="welcome-to-quokka-s-documentation">
 <h1>Welcome to Quokka’s documentation!<a class="headerlink" href="#welcome-to-quokka-s-documentation" title="Permalink to this headline">¶</a></h1>
-<p>Quokka has some features in common with <a class="reference external" href="http://eucalypt.gforge.inria.fr/"><img alt="EUCALPYT" src="_images/eucalypt.png" style="height: 1em;" /></a> but also many new features!</p>
+<p>Quokka has some features in common with its predecessor <a class="reference external" href="http://eucalypt.gforge.inria.fr/"><img alt="EUCALPYT" src="_images/eucalypt.png" style="height: 1em;" /></a> <a class="footnote-reference" href="#id3" id="id1">[1]</a>: counting the number of optimal reconciliations, listing optimal reconciliations to a file, keeping only the acyclic ones (the definition of cyclicity is taken from <a class="footnote-reference" href="#id4" id="id2">[2]</a>).</p>
+<div class="sidebar">
+<p class="first sidebar-title">Wow! New features!</p>
+<img alt="_images/quokka.jpg" class="last" src="_images/quokka.jpg" />
+</div>
+<p>Quokka also has some <strong>exciting new features</strong>:</p>
+<ul class="simple">
+<li>Counting and enumeration of even vectors, event partitions, equivalence classes (see the <a class="reference internal" href="enumeration.html#enumeration-tasks"><span class="std std-ref">Definitions of tasks</span></a> in <a class="reference internal" href="enumeration.html#optimal-enumeration"><span class="std std-ref">Optimal enumeration</span></a>)</li>
+<li>Enumeration of suboptimal reconciliations (see <a class="reference internal" href="suboptimal.html#suboptimal-enumeration"><span class="std std-ref">Suboptimal enumeration</span></a>)</li>
+<li>Animated visualization of event partitions and equivalence classes (see <a class="reference internal" href="visualization.html#output-visualization"><span class="std std-ref">Output visualization</span></a>)</li>
+</ul>
 <div class="toctree-wrapper compound">
 <p class="caption"><span class="caption-text">Documentation</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="enumeration.html">Standard enumeration</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="enumeration.html">Optimal enumeration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="enumeration.html#definitions-of-tasks">Definitions of tasks</a></li>
 <li class="toctree-l2"><a class="reference internal" href="enumeration.html#loading-an-input-file">Loading an input file</a></li>
-<li class="toctree-l2"><a class="reference internal" href="enumeration.html#counting-the-number-of-solutions">Counting the number of solutions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="enumeration.html#listing-solutions-to-a-file">Listing solutions to a file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enumeration.html#counting">Counting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enumeration.html#listing">Listing</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="suboptimal.html">Suboptimal enumeration</a><ul>
@@ -168,8 +179,31 @@
 <li class="toctree-l2"><a class="reference internal" href="suboptimal.html#example">Example</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="visualization.html">Output visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="visualization.html">Output visualization</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html#input-format">Input format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html#graphical-elements">Graphical elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html#visualization-methods">Visualization methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html#example">Example</a></li>
 </ul>
+</li>
+</ul>
+</div>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<table class="docutils footnote" frame="void" id="id3" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>Beatrice Donati, Christian Baudet, Blerina Sinaimeri, Pierluigi Crescenzi, and Marie-France Sagot. Eucalypt: efficient tree reconciliation enumerator.
+<em>Algorithms for Molecular Biology</em>, 10(1):3, 2015. doi: 10.1186/s13015-014-0031-3.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id4" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id2">[2]</a></td><td>Maureen Stolzer, Han Lai, Minli Xu, Deepa Sathaye, Benjamin Vernot, and Dannie Durand. Inferring duplications, losses, transfers and incomplete lineage sorting with nonbinary species trees.
+<em>Bioinformatics</em>, 28(18):i409–i415, 2012. doi: 10.1093/bioinformatics/bts386.</td></tr>
+</tbody>
+</table>
 </div>
 </div>
 
@@ -181,7 +215,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="enumeration.html" class="btn btn-neutral float-right" title="Standard enumeration" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="enumeration.html" class="btn btn-neutral float-right" title="Optimal enumeration" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
     </div>

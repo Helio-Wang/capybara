@@ -28,18 +28,18 @@ from sphinx_rtd_theme import __version__
 slug = re.sub(r'\W+', '-', project.lower())
 # version = __version__
 # release = __version__
-# author = u'Dave Snider, Read the Docs, Inc. & contributors'
+author = u'Hélio Wang & contributors'
 # copyright = author
-# language = 'en'
+language = 'en'
 
 extensions = [
     'sphinx.ext.intersphinx',
     'sphinx.ext.autodoc',
     'sphinx.ext.mathjax',
     'sphinx.ext.viewcode',
+    'sphinxcontrib.httpdomain',
     'sphinx_rtd_theme',
 ]
-
 templates_path = ['_templates']
 source_suffix = '.rst'
 exclude_patterns = []

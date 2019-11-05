@@ -24,7 +24,7 @@
         <script type="text/javascript" src="_static/jquery.js"></script>
         <script type="text/javascript" src="_static/underscore.js"></script>
         <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -84,9 +84,15 @@
             
               <p class="caption"><span class="caption-text">Documentation</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="enumeration.html">Standard enumeration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="enumeration.html">Optimal enumeration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="suboptimal.html">Suboptimal enumeration</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Output visualization</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Output visualization</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#input-format">Input format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#graphical-elements">Graphical elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#visualization-methods">Visualization methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#example">Example</a></li>
+</ul>
+</li>
 </ul>
 
             
@@ -157,17 +163,70 @@
 use <a class="reference external" href="http://eucalypt.gforge.inria.fr/viewer.html">the original viewer</a> for <a class="reference external" href="http://eucalypt.gforge.inria.fr/"><img alt="EUCALPYT" src="_images/eucalypt.png" style="height: 1em;" /></a>.</p>
 <p>For visualizating event partitions or equivalence classes (colorings of the parasite tree with animation),
 use the <a class="reference external" href="https://observablehq.com/&#64;heliow/tree-viewer">new animated web tool Quokka Viewer</a>.</p>
+<p>Next we present the usage of the new visualization tool.</p>
+<div class="section" id="input-format">
+<h2>Input format<a class="headerlink" href="#input-format" title="Permalink to this headline">¶</a></h2>
 <p>The Quokka visualizer tool takes two input formats generated from the third tab <em>Convert enumeration files for visualization</em> of the main Quokka tool:</p>
 <ul>
-<li><p>File input (DOT format) can be saved into the filesystem by clicking the <span class="guilabel">Save</span> button. This file needs to be uploaded into Quokka viewer
-after selecting the first upload method.</p></li>
-<li><p>Plain text input can be copied into the user’s clipboard by clicing the <span class="guilabel">Copy</span> button. Then the clipboard content can be pasted into Quokka viewer.</p>
+<li><p class="first">File input (DOT format) can be saved into the filesystem by clicking the <span class="guilabel">Save</span> button. This file needs to be uploaded into Quokka viewer
+after selecting the first upload method.</p>
+</li>
+<li><p class="first">Plain text input can be copied into the user’s clipboard by clicing the <span class="guilabel">Copy</span> button. Then the clipboard content can be pasted into Quokka viewer.</p>
 <p>Note that the text area for copy-and-paste is hidden by default, and will only appear after the user selects the second upload method <em>Copy and paste text</em>.</p>
 </li>
 </ul>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>When the Quokka app closes, the clipboard content will also be cleared. Therefore, if you choose the second upload method, <em>do not</em> close the main app while using the viewer.</p>
+<p class="first admonition-title">Note</p>
+<p class="last">When the Quokka app closes, the clipboard content will also be cleared. Therefore, if you choose the second upload method, <em>do not</em> close the main app while using the viewer.</p>
+</div>
+</div>
+<div class="section" id="graphical-elements">
+<h2>Graphical elements<a class="headerlink" href="#graphical-elements" title="Permalink to this headline">¶</a></h2>
+<p>One event partition or equivalence class will be drawn as a colored symbiont tree.</p>
+<dl class="docutils">
+<dt>Texts</dt>
+<dd>The names of the nodes in the symbiont tree are shown.</dd>
+<dt>Colors</dt>
+<dd>The internal nodes of the symbiont tree are colored according to the event. The correspondance between color and event is shown in the legend on top of the graphic area.</dd>
+</dl>
+<div class="figure">
+<img alt="_images/legend.png" src="_images/legend.png" />
+</div>
+<dl class="docutils">
+<dt>Hover texts</dt>
+<dd>When the mouse hovers over a node, the corresponding host name, if known, is shown in small tag. This applies to all leaf nodes of the symbiont tree, or, in an equivalence class, those internal nodes with non-host-switch event.</dd>
+</dl>
+</div>
+<div class="section" id="visualization-methods">
+<h2>Visualization methods<a class="headerlink" href="#visualization-methods" title="Permalink to this headline">¶</a></h2>
+<p>One <strong>frame</strong> of the animation corresponds to one event partition, or one equivalence class.</p>
+<p>The user can:</p>
+<ul class="simple">
+<li>Either <strong>play the animation</strong>, i.e., a continous transition of images from one frame to another. The transition time can be adjusted.
+This method is interesting because it can provide a quick global view on multiple solutions. Combined with a screen-recording tool, it can also produce a video output.</li>
+<li>Or <strong>freeze the animation</strong> at one particular frame. This can be useful for checking the host names in equivalence classes.</li>
+</ul>
+<p>A single frame can be <strong>saved in a image file</strong>, either by using the save button on top of the legend, or by using the cell menu (this menu appears when clicking the three small dots on the top left corner of the graphic area).</p>
+</div>
+<div class="section" id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<p>There are 4 event partitions on <a class="reference download internal" download="" href="_downloads/f054c587bf277e4566b42d3031f478f5/AS.nex"><code class="xref download docutils literal notranslate"><span class="pre">this</span> <span class="pre">example</span> <span class="pre">input</span> <span class="pre">file</span></code></a> and cost vector (-1,1,1,1). Thereofre, there are 4 frames in the animation.</p>
+<p><strong>Frame 1:</strong></p>
+<div class="figure">
+<img alt="_images/treesAnimation(0).png" src="_images/treesAnimation(0).png" />
+</div>
+<p><strong>Frame 2:</strong></p>
+<div class="figure">
+<img alt="_images/treesAnimation(1).png" src="_images/treesAnimation(1).png" />
+</div>
+<p><strong>Frame 3:</strong></p>
+<div class="figure">
+<img alt="_images/treesAnimation(2).png" src="_images/treesAnimation(2).png" />
+</div>
+<p><strong>Frame 4:</strong></p>
+<div class="figure">
+<img alt="_images/treesAnimation(3).png" src="_images/treesAnimation(3).png" />
+</div>
 </div>
 </div>
 

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Standard enumeration &mdash; Quokka  documentation</title>
+  <title>Optimal enumeration &mdash; Quokka  documentation</title>
   
 
   
@@ -24,7 +24,7 @@
         <script type="text/javascript" src="_static/jquery.js"></script>
         <script type="text/javascript" src="_static/underscore.js"></script>
         <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -85,17 +85,22 @@
             
               <p class="caption"><span class="caption-text">Documentation</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Standard enumeration</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Optimal enumeration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#definitions-of-tasks">Definitions of tasks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#task-t1-all-solutions">Task T1: All solutions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#task-t2-event-vectors">Task T2: Event vectors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#task-t3-event-partitions">Task T3: Event partitions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#task-t4-equivalence-classes">Task T4: Equivalence classes</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#loading-an-input-file">Loading an input file</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#counting-the-number-of-solutions">Counting the number of solutions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#counting">Counting</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#basic-usage">Basic usage</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#meaning-of-tasks">Meaning of tasks</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#example">Example</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#listing-solutions-to-a-file">Listing solutions to a file</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id2">Basic usage</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id3">Meaning of tasks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#listing">Listing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id4">Basic usage</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#options-for-tasks-t1-and-t2">Options for tasks T1 and T2</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#options-for-tasks-t3-and-t4">Options for tasks T3 and T4</a></li>
 </ul>
@@ -149,7 +154,7 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>Standard enumeration</li>
+      <li>Optimal enumeration</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -168,97 +173,107 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="standard-enumeration">
-<span id="id1"></span><h1><a class="toc-backref" href="#id4">Standard enumeration</a><a class="headerlink" href="#standard-enumeration" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="optimal-enumeration">
+<span id="id1"></span><h1><a class="toc-backref" href="#id5">Optimal enumeration</a><a class="headerlink" href="#optimal-enumeration" title="Permalink to this headline">¶</a></h1>
 <div class="contents topic" id="table-of-contents">
 <p class="topic-title first">Table of Contents</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#standard-enumeration" id="id4">Standard enumeration</a></p>
-<ul>
-<li><p><a class="reference internal" href="#loading-an-input-file" id="id5">Loading an input file</a></p></li>
-<li><p><a class="reference internal" href="#counting-the-number-of-solutions" id="id6">Counting the number of solutions</a></p>
-<ul>
-<li><p><a class="reference internal" href="#basic-usage" id="id7">Basic usage</a></p></li>
-<li><p><a class="reference internal" href="#meaning-of-tasks" id="id8">Meaning of tasks</a></p></li>
-<li><p><a class="reference internal" href="#example" id="id9">Example</a></p></li>
+<li><a class="reference internal" href="#optimal-enumeration" id="id5">Optimal enumeration</a><ul>
+<li><a class="reference internal" href="#definitions-of-tasks" id="id6">Definitions of tasks</a><ul>
+<li><a class="reference internal" href="#task-t1-all-solutions" id="id7">Task T1: All solutions</a></li>
+<li><a class="reference internal" href="#task-t2-event-vectors" id="id8">Task T2: Event vectors</a></li>
+<li><a class="reference internal" href="#task-t3-event-partitions" id="id9">Task T3: Event partitions</a></li>
+<li><a class="reference internal" href="#task-t4-equivalence-classes" id="id10">Task T4: Equivalence classes</a></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#listing-solutions-to-a-file" id="id10">Listing solutions to a file</a></p>
-<ul>
-<li><p><a class="reference internal" href="#id2" id="id11">Basic usage</a></p></li>
-<li><p><a class="reference internal" href="#id3" id="id12">Meaning of tasks</a></p></li>
-<li><p><a class="reference internal" href="#options-for-tasks-t1-and-t2" id="id13">Options for tasks T1 and T2</a></p></li>
-<li><p><a class="reference internal" href="#options-for-tasks-t3-and-t4" id="id14">Options for tasks T3 and T4</a></p></li>
+<li><a class="reference internal" href="#loading-an-input-file" id="id11">Loading an input file</a></li>
+<li><a class="reference internal" href="#counting" id="id12">Counting</a><ul>
+<li><a class="reference internal" href="#basic-usage" id="id13">Basic usage</a></li>
+<li><a class="reference internal" href="#example" id="id14">Example</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#listing" id="id15">Listing</a><ul>
+<li><a class="reference internal" href="#id4" id="id16">Basic usage</a></li>
+<li><a class="reference internal" href="#options-for-tasks-t1-and-t2" id="id17">Options for tasks T1 and T2</a></li>
+<li><a class="reference internal" href="#options-for-tasks-t3-and-t4" id="id18">Options for tasks T3 and T4</a></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
 </div>
-<div class="section" id="loading-an-input-file">
-<h2><a class="toc-backref" href="#id5">Loading an input file</a><a class="headerlink" href="#loading-an-input-file" title="Permalink to this headline">¶</a></h2>
-<p>The input format is the same as for <a class="reference external" href="http://eucalypt.gforge.inria.fr/"><img alt="EUCALPYT" src="_images/eucalypt.png" style="height: 1em;" /></a>.
-<a class="reference download internal" download="" href="_downloads/e575a799492a4fca05b3d591eda508c6/AS.nex"><code class="xref download docutils literal notranslate"><span class="pre">Here</span> <span class="pre">is</span> <span class="pre">an</span> <span class="pre">example</span> <span class="pre">input</span> <span class="pre">file</span></code></a>.
-Note that the symbiont tree can be also introduced in a block starting with <cite>BEGIN SYMBIONT</cite> instead of <cite>BEGIN PARASITE</cite>.</p>
-<p>After loading a file with the <span class="guilabel">Open</span> button, the input file information is displayed, and
-the other buttons become available:</p>
-<div class="figure align-default">
-<img alt="_images/Capture1.png" src="_images/Capture1.png" />
-</div>
-<div class="admonition-cost-vector admonition">
-<p class="admonition-title">Cost vector</p>
-<ul class="simple">
-<li><p>Before clicking on the <span class="guilabel">Count</span> or <span class="guilabel">Enumerate</span> button, choose the desired cost vector.</p></li>
-<li><p>All four numbers must be <strong>integers</strong>.</p></li>
-<li><p>Floating point numbers will be rounded towards zero (3.6 becomes 3, -3.6 becomes -3).</p></li>
-<li><p>Different cost vectors can be used, for example, across differents runs of the counting tasks, without needing to re-load the input file.</p></li>
-</ul>
-</div>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<ul class="simple">
-<li><p>The file openning and saving dialogs have their own application-wide favorites list.
-The user can add a folder to favorites using drag and drop to have quicker access in the futur.</p></li>
-<li><p>Not sure what an option means? Most buttons and boxes have help messages (tooltip). These will appear when the mouse cursor moves over an item.</p></li>
-</ul>
-</div>
-</div>
-<div class="section" id="counting-the-number-of-solutions">
-<h2><a class="toc-backref" href="#id6">Counting the number of solutions</a><a class="headerlink" href="#counting-the-number-of-solutions" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="basic-usage">
-<h3><a class="toc-backref" href="#id7">Basic usage</a><a class="headerlink" href="#basic-usage" title="Permalink to this headline">¶</a></h3>
-<p>The user can check multiple boxes in <strong>Task</strong> then click on the <span class="guilabel">Count</span> button for the results to be printed directly in the <strong>Output</strong> area.</p>
-<p>It is possible to save the on-screen text output to a file using the <span class="guilabel">Save</span> button.</p>
-</div>
-<div class="section" id="meaning-of-tasks">
-<h3><a class="toc-backref" href="#id8">Meaning of tasks</a><a class="headerlink" href="#meaning-of-tasks" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="definitions-of-tasks">
+<span id="enumeration-tasks"></span><h2><a class="toc-backref" href="#id6">Definitions of tasks</a><a class="headerlink" href="#definitions-of-tasks" title="Permalink to this headline">¶</a></h2>
+<p>By choosing the option <em>Standard counting and enumeration</em> in Quokka, the user can either count or list one of the following:</p>
 <p>For a given input file and a given cost vector, let <strong>S</strong> be the set containing all reconciliations of minimum cost (cyclic or acyclic).</p>
-<p>The exact meaning of <span class="guilabel">Count</span> depending on the chosen task is summarized below:</p>
-<dl>
-<dt>Task T1: All solutions</dt><dd><p>Size of <strong>S</strong>.</p>
-</dd>
-<dt>Task T2: T2: Event vectors</dt><dd><p>Number of different event vectors in <strong>S</strong>.</p>
-<p>The <em>event vector</em> of a reconciliation is a vector of four integers
-representing the number of occurrences of cospeciation,
-duplication, host-switch, and loss events.</p>
+<div class="section" id="task-t1-all-solutions">
+<h3><a class="toc-backref" href="#id7">Task T1: All solutions</a><a class="headerlink" href="#task-t1-all-solutions" title="Permalink to this headline">¶</a></h3>
+<p><span class="guilabel">Count</span>: size of <strong>S</strong>.</p>
+<p><span class="guilabel">Enumerate</span>: the set <strong>S</strong>.</p>
+</div>
+<div class="section" id="task-t2-event-vectors">
+<h3><a class="toc-backref" href="#id8">Task T2: Event vectors</a><a class="headerlink" href="#task-t2-event-vectors" title="Permalink to this headline">¶</a></h3>
+<p><span class="guilabel">Count</span>: number of different event vectors in <strong>S</strong>.</p>
+<p><span class="guilabel">Enumerate</span>: all different event vectors in <strong>S</strong>.</p>
+<p>The <a href="#id2"><span class="problematic" id="id3">**</span></a>event vector* of a reconciliation is a vector of four integers representing the number of occurrences of cospeciation, duplication, host-switch, and loss events.</p>
 <p>Two reconciliations have the same event vectors if the numbers of each event are the same.</p>
-</dd>
-<dt>Task T3: Event partitions</dt><dd><p>Number of different event partitions in <strong>S</strong>.</p>
-<p>The <em>event partition</em> of a reconciliation is a partition of the internal nodes of the symbiont tree
+</div>
+<div class="section" id="task-t3-event-partitions">
+<h3><a class="toc-backref" href="#id9">Task T3: Event partitions</a><a class="headerlink" href="#task-t3-event-partitions" title="Permalink to this headline">¶</a></h3>
+<p><span class="guilabel">Count</span>: number of different event partitions in <strong>S</strong>.</p>
+<p><span class="guilabel">Enumerate</span>: all different event partitions in <strong>S</strong>.</p>
+<p>The <strong>event partition</strong> of a reconciliation is a partition of the internal nodes of the symbiont tree
 into three subsets: cospeciation, duplicaiton, and host-switch nodes.</p>
 <p>Two reconciliations have the same event partitions if, for each node in the symbiont tree,
 the assigned events (cospeciation, duplication, host-switch) are the same, regardless of the hosts.</p>
-</dd>
-<dt>Task T4: Equivalence classes</dt><dd><p>Number of equivalence classes in <strong>S</strong>.</p>
-<p>Two reconciliations are considered equivalent if, for each node in the symbiont tree,
+</div>
+<div class="section" id="task-t4-equivalence-classes">
+<h3><a class="toc-backref" href="#id10">Task T4: Equivalence classes</a><a class="headerlink" href="#task-t4-equivalence-classes" title="Permalink to this headline">¶</a></h3>
+<p><span class="guilabel">Count</span>: number of equivalence classes in <strong>S</strong>.</p>
+<p><span class="guilabel">Enumerate</span>: all equivalence classes in <strong>S</strong>.</p>
+<p>Two reconciliations are considered <strong>equivalent</strong> if, for each node in the symbiont tree,
 the assigned events (cospeciation, duplication, host-switch) are the same, moreover, the assigned hosts
 are also the same except when the event is a host-switch.</p>
-</dd>
-</dl>
+</div>
+</div>
+<div class="section" id="loading-an-input-file">
+<span id="enumeration-input"></span><h2><a class="toc-backref" href="#id11">Loading an input file</a><a class="headerlink" href="#loading-an-input-file" title="Permalink to this headline">¶</a></h2>
+<p>The input format is the same as for <a class="reference external" href="http://eucalypt.gforge.inria.fr/"><img alt="EUCALPYT" src="_images/eucalypt.png" style="height: 1em;" /></a>.
+<a class="reference download internal" download="" href="_downloads/f054c587bf277e4566b42d3031f478f5/AS.nex"><code class="xref download docutils literal notranslate"><span class="pre">Here</span> <span class="pre">is</span> <span class="pre">an</span> <span class="pre">example</span> <span class="pre">input</span> <span class="pre">file</span></code></a>.
+Note that the symbiont tree can be also introduced in a block starting with <cite>BEGIN SYMBIONT</cite> instead of <cite>BEGIN PARASITE</cite>.</p>
+<p>After loading a file with the <span class="guilabel">Open</span> button, the input file information is displayed, and
+the other buttons become available:</p>
+<div class="figure">
+<img alt="_images/Capture1.png" src="_images/Capture1.png" />
+</div>
+<div class="admonition-cost-vector admonition">
+<p class="first admonition-title">Cost vector</p>
+<ul class="last simple">
+<li>Before clicking on the <span class="guilabel">Count</span> or <span class="guilabel">Enumerate</span> button, choose the desired cost vector.</li>
+<li>All four numbers must be <strong>integers</strong>.</li>
+<li>Floating point numbers will be rounded towards zero (3.6 becomes 3, -3.6 becomes -3).</li>
+<li>Different cost vectors can be used, for example, across differents runs of the counting tasks, without needing to re-load the input file.</li>
+</ul>
+</div>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<ul class="last simple">
+<li>The file openning and saving dialogs have their own application-wide favorites list.
+The user can add a folder to favorites using drag and drop to have quicker access in the futur.</li>
+<li>Not sure what an option means? Most buttons and boxes have help messages (tooltip). These will appear when the mouse cursor moves over an item.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="counting">
+<h2><a class="toc-backref" href="#id12">Counting</a><a class="headerlink" href="#counting" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="basic-usage">
+<h3><a class="toc-backref" href="#id13">Basic usage</a><a class="headerlink" href="#basic-usage" title="Permalink to this headline">¶</a></h3>
+<p>The user can check multiple boxes in <strong>Task</strong> then click on the <span class="guilabel">Count</span> button for the results to be printed directly in the <strong>Output</strong> area.</p>
+<p>It is possible to save the on-screen text output to a file using the <span class="guilabel">Save</span> button.</p>
 </div>
 <div class="section" id="example">
-<h3><a class="toc-backref" href="#id9">Example</a><a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
-<p>Here is the output of all four counting tasks on the <a class="reference download internal" download="" href="_downloads/e575a799492a4fca05b3d591eda508c6/AS.nex"><code class="xref download docutils literal notranslate"><span class="pre">example</span> <span class="pre">input</span></code></a>:</p>
+<h3><a class="toc-backref" href="#id14">Example</a><a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
+<p>Here is the output of all four counting tasks on the <a class="reference download internal" download="" href="_downloads/f054c587bf277e4566b42d3031f478f5/AS.nex"><code class="xref download docutils literal notranslate"><span class="pre">example</span> <span class="pre">input</span></code></a>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">===============</span>
 <span class="n">Job</span> <span class="n">started</span> <span class="n">at</span> <span class="mi">2019</span><span class="o">-</span><span class="mi">09</span><span class="o">-</span><span class="mi">20</span> <span class="mi">15</span><span class="p">:</span><span class="mi">24</span><span class="p">:</span><span class="mi">52</span>
 <span class="n">Cost</span> <span class="n">vector</span><span class="p">:</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
@@ -289,44 +304,20 @@ are also the same except when the event is a host-switch.</p>
 </div>
 </div>
 </div>
-<div class="section" id="listing-solutions-to-a-file">
-<h2><a class="toc-backref" href="#id10">Listing solutions to a file</a><a class="headerlink" href="#listing-solutions-to-a-file" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="id2">
-<h3><a class="toc-backref" href="#id11">Basic usage</a><a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
-<p>Use the <span class="guilabel">Enumerate</span> button for listing solutions to a file that can be used for analaysis or visualization.
+<div class="section" id="listing">
+<h2><a class="toc-backref" href="#id15">Listing</a><a class="headerlink" href="#listing" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id4">
+<h3><a class="toc-backref" href="#id16">Basic usage</a><a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>Use the <span class="guilabel">Enumerate</span> button for listing solutions to a file that can be used for analysis or visualization.
 Unlike the <span class="guilabel">Count</span> button, it allows only one task box to be checked at a time.</p>
 <p>After choosing the output file name, the user selects additional options, depending on the task. Once the additional options are confirmed, the computation starts automatically, and a progress bar pops out. It is possible to stop the computation at anytime by closing the progress bar (the program may freeze for a few seconds).</p>
 <p>Note that the on-screen text output (human-readable trace of computational tasks) can still be saved using the <span class="guilabel">Save</span> button.</p>
 </div>
-<div class="section" id="id3">
-<h3><a class="toc-backref" href="#id12">Meaning of tasks</a><a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
-<p>Recall that <strong>S</strong> is the set containing all reconciliations of minimum cost (cyclic or acyclic).</p>
-<p>The meaning of <span class="guilabel">Enumerate</span> depending on the chosen task is summarized below:</p>
-<dl>
-<dt>Task T1: All solutions</dt><dd><p>List all reconciliations in <strong>S</strong>.</p>
-</dd>
-<dt>Task T2: T2: Event vectors</dt><dd><p>List all different event vectors in <strong>S</strong>, and for each event vector, one reconcliation in <strong>S</strong>.</p>
-<p>There can be many reconciliations (cyclic or acyclic) having the same event vector as the
-ones in the output (cyclic or acyclic).</p>
-</dd>
-<dt>Task T3: Event partitions</dt><dd><p>Number of different event partitions in <strong>S</strong>.</p>
-<p>The <em>event partition</em> of a reconciliation is a partition of the internal nodes of the symbiont tree
-into three subsets: cospeciation, duplicaiton, and host-switch nodes.</p>
-<p>Two reconciliations have the same event partitions if, for each node in the symbiont tree,
-the assigned events (cospeciation, duplication, host-switch) are the same, regardless of the hosts.</p>
-</dd>
-<dt>Task T4: Equivalence classes</dt><dd><p>Number of equivalence classes in <strong>S</strong>.</p>
-<p>Two reconciliations are considered equivalent if, for each node in the symbiont tree,
-the assigned events (cospeciation, duplication, host-switch) are the same, moreover, the assigned hosts
-are also the same except when the event is a host-switch.</p>
-</dd>
-</dl>
-</div>
 <div class="section" id="options-for-tasks-t1-and-t2">
-<h3><a class="toc-backref" href="#id13">Options for tasks T1 and T2</a><a class="headerlink" href="#options-for-tasks-t1-and-t2" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id17">Options for tasks T1 and T2</a><a class="headerlink" href="#options-for-tasks-t1-and-t2" title="Permalink to this headline">¶</a></h3>
 <p>The output is in the same format as the output of <a class="reference external" href="http://eucalypt.gforge.inria.fr/"><img alt="EUCALPYT" src="_images/eucalypt.png" style="height: 1em;" /></a>. And just like in <a class="reference external" href="http://eucalypt.gforge.inria.fr/"><img alt="EUCALPYT" src="_images/eucalypt.png" style="height: 1em;" /></a>, the user can choose the maximum number of solutions that she likes to generate.</p>
 <p>For the task T1 (all optimal reconciliations) only, it is possible to keep only the acyclic reconciliations.</p>
-<p>Here is an example of the on-screen output when this option is chosen, for <a class="reference download internal" download="" href="_downloads/9716c7d08c73ba9ab111234d0526ef66/SFC.nex"><code class="xref download docutils literal notranslate"><span class="pre">another</span> <span class="pre">input</span> <span class="pre">file</span></code></a> and cost vector (0,1,1,1):</p>
+<p>Here is an example of the on-screen output when this option is chosen, for <a class="reference download internal" download="" href="_downloads/5b96ebae1116ce098bcf4ed560bb634b/SFC.nex"><code class="xref download docutils literal notranslate"><span class="pre">another</span> <span class="pre">input</span> <span class="pre">file</span></code></a> and cost vector (0,1,1,1):</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">===============</span>
 <span class="n">Job</span> <span class="n">started</span> <span class="n">at</span> <span class="mi">2019</span><span class="o">-</span><span class="mi">09</span><span class="o">-</span><span class="mi">20</span> <span class="mi">19</span><span class="p">:</span><span class="mi">40</span><span class="p">:</span><span class="mi">04</span>
 <span class="n">Cost</span> <span class="n">vector</span><span class="p">:</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
@@ -343,15 +334,22 @@ are also the same except when the event is a host-switch.</p>
 </div>
 </div>
 <div class="section" id="options-for-tasks-t3-and-t4">
-<h3><a class="toc-backref" href="#id14">Options for tasks T3 and T4</a><a class="headerlink" href="#options-for-tasks-t3-and-t4" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id18">Options for tasks T3 and T4</a><a class="headerlink" href="#options-for-tasks-t3-and-t4" title="Permalink to this headline">¶</a></h3>
 <p>There are two output types:</p>
-<div class="figure align-default">
+<div class="figure">
 <img alt="_images/Capture2.png" src="_images/Capture2.png" />
 </div>
-<ul class="simple">
-<li><p>If the first output type <cite>“labels only”</cite> is chosen, the result will be compatible with the <a class="reference external" href="visualization.html">new visualization tool Quokka Viewer</a>.</p></li>
-<li><p>If the second output type <cite>“reconciliation”</cite> is chosen, the result will be compatible with the <a class="reference external" href="http://eucalypt.gforge.inria.fr/viewer.html">the original viewer</a> for <a class="reference external" href="http://eucalypt.gforge.inria.fr/"><img alt="EUCALPYT" src="_images/eucalypt.png" style="height: 1em;" /></a>.</p></li>
-</ul>
+<p><strong>Labels only</strong></p>
+<blockquote>
+<div><p>If the first output type <cite>“labels only”</cite> is chosen, the result will be compatible with the <a class="reference external" href="visualization.html">new visualization tool Quokka Viewer</a>.</p>
+<p><strong>Task T3</strong>: Each event partition is represented by the assignment, to each internal symbiont node, of one of the three events.</p>
+<p><strong>Task T4</strong>: Each equivalence class is represented by the assignment, to each internal symbiont node, of one of the three events, and the assignment of a host hame to each symbiont node with non-host-switch event.</p>
+</div></blockquote>
+<p><strong>Reconciliation</strong></p>
+<blockquote>
+<div><p>If the second output type <cite>“reconciliation”</cite> is chosen, the result will be compatible with the <a class="reference external" href="http://eucalypt.gforge.inria.fr/viewer.html">the original viewer</a> for <a class="reference external" href="http://eucalypt.gforge.inria.fr/"><img alt="EUCALPYT" src="_images/eucalypt.png" style="height: 1em;" /></a>.</p>
+<p>Note that in this case, the output is only one reconciliation chosen arbitrarily among the potentially many (cyclic or acyclic) reconciliations having the same event partition or belonging in the same equivalence class.</p>
+</div></blockquote>
 </div>
 </div>
 </div>
