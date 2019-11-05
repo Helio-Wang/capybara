@@ -30,7 +30,6 @@ slug = re.sub(r'\W+', '-', project.lower())
 # release = __version__
 author = u'Helio Wang & contributors'
 # copyright = author
-language = 'en'
 
 extensions = [
     'sphinx.ext.intersphinx',
