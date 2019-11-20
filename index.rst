@@ -28,7 +28,7 @@ Quokka also has some **exciting new features**:
 
 Download
 --------
-`Click here to get Quokka<https://github.com/Helio-Wang/Quokka-app/releases/latest>`__.
+`Click here to get Quokka <https://github.com/Helio-Wang/Quokka-app/releases/latest>`__.
 
 
 .. toctree::
