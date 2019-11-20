@@ -26,6 +26,10 @@ Quokka also has some **exciting new features**:
 
 - Animated visualization of event partitions and equivalence classes (see :ref:`Output visualization`)
 
+Download
+--------
+https://github.com/Helio-Wang/Quokka-app/releases/latest
+
 
 .. toctree::
    :caption: Documentation
