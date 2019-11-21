@@ -45,7 +45,7 @@ Texts
 Colors
   The internal nodes of the symbiont tree are colored according to the event. The correspondance between color and event is shown in the legend on top of the graphic area.
 
-.. figure:: resources/legend.png
+.. figure:: resources/legend1.png
 
 Hover texts
   When the mouse hovers over a node, the corresponding host name, if known, is shown in small tag. This applies to all leaf nodes of the symbiont tree, or, in an equivalence class, those internal nodes with non-host-switch event.
