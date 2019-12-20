@@ -6,7 +6,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'Quokka'
+project = 'Capybara'
 copyright = '2019, Hélio Wang'
 author = 'Hélio Wang'
 

@@ -1,2 +1,2 @@
-# Quokka
-[Documentation for Quokka](https://quokka-cophy.readthedocs.io/en/latest/)
+# Capybara
+[Documentation for Capybara](https://capybara-doc.readthedocs.io/en/latest/)

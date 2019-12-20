@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Output visualization &mdash; Quokka  documentation</title>
+  <title>Output visualization &mdash; Capybara  documentation</title>
   
 
   
@@ -107,7 +107,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">Quokka</a>
+          <a href="index.html">Capybara</a>
         
       </nav>
 
@@ -162,22 +162,22 @@
 <p>For visualizating reconciliations (symbiont tree drawn on top of the host tree),
 use <a class="reference external" href="http://eucalypt.gforge.inria.fr/viewer.html">the original viewer</a> for <a class="reference external" href="http://eucalypt.gforge.inria.fr/"><img alt="EUCALPYT" src="_images/eucalypt.png" style="height: 1em;" /></a>.</p>
 <p>For visualizating event partitions or equivalence classes (colorings of the parasite tree with animation),
-use the <a class="reference external" href="https://observablehq.com/&#64;heliow/tree-viewer">new animated web tool Quokka Viewer</a>.</p>
+use the <a class="reference external" href="https://observablehq.com/&#64;heliow/tree-viewer">new animated web tool Capybara Viewer</a>.</p>
 <p>Next we present the usage of the new visualization tool.</p>
 <div class="section" id="input-format">
 <h2>Input format<a class="headerlink" href="#input-format" title="Permalink to this headline">¶</a></h2>
-<p>The Quokka visualizer tool takes two input formats generated from the third tab <em>Convert enumeration files for visualization</em> of the main Quokka tool:</p>
+<p>The Capybara visualizer tool takes two input formats generated from the third tab <em>Convert enumeration files for visualization</em> of the main Capybara tool:</p>
 <ul>
-<li><p class="first">File input (DOT format) can be saved into the filesystem by clicking the <span class="guilabel">Save</span> button. This file needs to be uploaded into Quokka viewer
+<li><p class="first">File input (DOT format) can be saved into the filesystem by clicking the <span class="guilabel">Save</span> button. This file needs to be uploaded into Capybara viewer
 after selecting the first upload method.</p>
 </li>
-<li><p class="first">Plain text input can be copied into the user’s clipboard by clicing the <span class="guilabel">Copy</span> button. Then the clipboard content can be pasted into Quokka viewer.</p>
+<li><p class="first">Plain text input can be copied into the user’s clipboard by clicing the <span class="guilabel">Copy</span> button. Then the clipboard content can be pasted into Capybara viewer.</p>
 <p>Note that the text area for copy-and-paste is hidden by default, and will only appear after the user selects the second upload method <em>Copy and paste text</em>.</p>
 </li>
 </ul>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">When the Quokka app closes, the clipboard content will also be cleared. Therefore, if you choose the second upload method, <em>do not</em> close the main app while using the viewer.</p>
+<p class="last">When the Capybara app closes, the clipboard content will also be cleared. Therefore, if you choose the second upload method, <em>do not</em> close the main app while using the viewer.</p>
 </div>
 </div>
 <div class="section" id="graphical-elements">
@@ -190,7 +190,7 @@ after selecting the first upload method.</p>
 <dd>The internal nodes of the symbiont tree are colored according to the event. The correspondance between color and event is shown in the legend on top of the graphic area.</dd>
 </dl>
 <div class="figure">
-<img alt="_images/legend.png" src="_images/legend.png" />
+<img alt="_images/legend1.png" src="_images/legend1.png" />
 </div>
 <dl class="docutils">
 <dt>Hover texts</dt>
@@ -210,7 +210,7 @@ This method is interesting because it can provide a quick global view on multipl
 </div>
 <div class="section" id="example">
 <h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
-<p>There are 4 event partitions on <a class="reference download internal" download="" href="_downloads/f054c587bf277e4566b42d3031f478f5/AS.nex"><code class="xref download docutils literal notranslate"><span class="pre">this</span> <span class="pre">example</span> <span class="pre">input</span> <span class="pre">file</span></code></a> and cost vector (-1,1,1,1). Thereofre, there are 4 frames in the animation.</p>
+<p>There are 4 event partitions on <a class="reference download internal" download="" href="_downloads/b7d79183ca69e48a443e984e8ff0bdd6/AS.nex"><code class="xref download docutils literal notranslate"><span class="pre">this</span> <span class="pre">example</span> <span class="pre">input</span> <span class="pre">file</span></code></a> and cost vector (-1,1,1,1). Thereofre, there are 4 frames in the animation.</p>
 <p><strong>Frame 1:</strong></p>
 <div class="figure">
 <img alt="_images/treesAnimation(0).png" src="_images/treesAnimation(0).png" />

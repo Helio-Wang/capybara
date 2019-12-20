@@ -12,7 +12,7 @@ For visualizating reconciliations (symbiont tree drawn on top of the host tree),
 use `the original viewer <http://eucalypt.gforge.inria.fr/viewer.html>`__ for |eucalpyt|.
 
 For visualizating event partitions or equivalence classes (colorings of the parasite tree with animation), 
-use the `new animated web tool Quokka Viewer <https://observablehq.com/@heliow/tree-viewer>`__.
+use the `new animated web tool Capybara Viewer <https://observablehq.com/@heliow/tree-viewer>`__.
 
 Next we present the usage of the new visualization tool.
 
@@ -21,17 +21,17 @@ Next we present the usage of the new visualization tool.
 Input format
 ------------
 
-The Quokka visualizer tool takes two input formats generated from the third tab *Convert enumeration files for visualization* of the main Quokka tool:
+The Capybara visualizer tool takes two input formats generated from the third tab *Convert enumeration files for visualization* of the main Capybara tool:
 
-- File input (DOT format) can be saved into the filesystem by clicking the :guilabel:`Save` button. This file needs to be uploaded into Quokka viewer
+- File input (DOT format) can be saved into the filesystem by clicking the :guilabel:`Save` button. This file needs to be uploaded into Capybara viewer
   after selecting the first upload method.
 
-- Plain text input can be copied into the user's clipboard by clicing the :guilabel:`Copy` button. Then the clipboard content can be pasted into Quokka viewer.
+- Plain text input can be copied into the user's clipboard by clicing the :guilabel:`Copy` button. Then the clipboard content can be pasted into Capybara viewer.
 
   Note that the text area for copy-and-paste is hidden by default, and will only appear after the user selects the second upload method *Copy and paste text*.
 
 .. note::
-    When the Quokka app closes, the clipboard content will also be cleared. Therefore, if you choose the second upload method, *do not* close the main app while using the viewer.
+    When the Capybara app closes, the clipboard content will also be cleared. Therefore, if you choose the second upload method, *do not* close the main app while using the viewer.
 
 
 Graphical elements

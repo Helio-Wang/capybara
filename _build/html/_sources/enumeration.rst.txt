@@ -15,7 +15,7 @@ Optimal enumeration
 Definitions of tasks
 ====================
 
-By choosing the option *Standard counting and enumeration* in Quokka, the user can either count or list one of the following:
+By choosing the option *Standard counting and enumeration* in Capybara, the user can either count or list one of the following:
 
 
 For a given input file and a given cost vector, let **S** be the set containing all reconciliations of minimum cost (cyclic or acyclic).
@@ -34,7 +34,7 @@ Task T2: Event vectors
 
 :guilabel:`Enumerate`: all different event vectors in **S**.
                                                             
-The **event vector* of a reconciliation is a vector of four integers representing the number of occurrences of cospeciation, duplication, host-switch, and loss events.                      
+The **event vector** of a reconciliation is a vector of four integers representing the number of occurrences of cospeciation, duplication, host-switch, and loss events.                      
 
 Two reconciliations have the same event vectors if the numbers of each event are the same.                        
 
@@ -182,7 +182,7 @@ There are two output types:
    
 **Labels only**
 
-   If the first output type `"labels only"` is chosen, the result will be compatible with the `new visualization tool Quokka Viewer`_.
+   If the first output type `"labels only"` is chosen, the result will be compatible with the `new visualization tool Capybara Viewer`_.
 
    **Task T3**: Each event partition is represented by the assignment, to each internal symbiont node, of one of the three events.
 
@@ -194,6 +194,6 @@ There are two output types:
 
    Note that in this case, the output is only one reconciliation chosen arbitrarily among the potentially many (cyclic or acyclic) reconciliations having the same event partition or belonging in the same equivalence class.
 
-.. _new visualization tool Quokka Viewer: visualization.html
+.. _new visualization tool Capybara Viewer: visualization.html
 
 

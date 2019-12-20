@@ -1,4 +1,4 @@
-.. Quokka documentation master file, created by
+.. Capybara documentation master file, created by
    sphinx-quickstart on Thu Sep 19 18:09:51 2019.
 
 .. |EUCALPYT| image:: resources/eucalypt.png
@@ -6,17 +6,17 @@
    :target: http://eucalypt.gforge.inria.fr/
 
 
-Welcome to Quokka's documentation!
+Welcome to Capybara's documentation!
 =======================================
 
-Quokka has some features in common with its predecessor |EUCALPYT| [1]_: counting the number of optimal reconciliations, listing optimal reconciliations to a file, keeping only the acyclic ones (the definition of cyclicity is taken from [2]_).
+Capybara has some features in common with its predecessor |EUCALPYT| [1]_: counting the number of optimal reconciliations, listing optimal reconciliations to a file, keeping only the acyclic ones (the definition of cyclicity is taken from [2]_).
 
 
 .. sidebar:: Wow! New features!
 
-    .. image:: resources/quokka.jpg
+    .. image:: resources/Capybara1.jpg
 
-Quokka also has some **exciting new features**: 
+Capybara also has some **exciting new features**: 
 
 - Counting and enumeration of even vectors, event partitions, equivalence classes (see the :ref:`Enumeration tasks` in :ref:`Optimal enumeration`)
 
@@ -26,7 +26,7 @@ Quokka also has some **exciting new features**:
 
 Download
 --------
-`Click here to get Quokka <https://github.com/Helio-Wang/Quokka-app/releases/latest>`__.
+`Click here to get Capybara <https://github.com/Helio-Wang/Capybara-app/releases/latest>`__.
 
 
 .. toctree::
