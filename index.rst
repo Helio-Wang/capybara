@@ -24,15 +24,13 @@ Capybara also has some **exciting new features**:
 
 - Animated visualization of event partitions and equivalence classes (see :ref:`Output visualization`)
 
-Download
---------
-`Click here to get Capybara <https://github.com/Helio-Wang/Capybara-app/releases/latest>`__.
 
 
 .. toctree::
    :caption: Documentation
    :maxdepth: 2
 
+   installation
    enumeration
    suboptimal
    visualization
