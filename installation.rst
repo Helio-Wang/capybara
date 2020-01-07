@@ -54,7 +54,7 @@ Then, you can execute the main script directly:
 
 .. code:: console
 
-   pipenv run python3 main.py
+   pipenv run python main.py
 
 Alternatively, you can build and run the binary:
 
