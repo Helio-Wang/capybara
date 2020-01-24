@@ -60,6 +60,7 @@ Alternatively, you can build and run the binary:
 
 .. code:: console
 
+   pipenv install -d
    pipenv run python -OO -m PyInstaller main.py -F
    dist/./main
 
