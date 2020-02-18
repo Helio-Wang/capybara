@@ -11,6 +11,8 @@ Welcome to Capybara's documentation!
 
 Capybara is a desktop application for solving the **Phylogenetic tree reconciliation problem**.
 
+Keywords: Cophylogeny reconstruction, phylogenetic tree reconciliationm, enumeration.
+
 
 Capybara has some features in common with its predecessor |EUCALPYT| [1]_: counting the number of optimal reconciliations, listing optimal reconciliations to a file, keeping only the acyclic ones (the definition of cyclicity is taken from [2]_).
 
