@@ -14,7 +14,7 @@ You can find the binary executables of Capybara for the following OS:
 
   - Microsoft Windows 10
   - macOs
-  - Linux (Ubuntu, Fedora, Arch Linux, Manjaro, etc.)
+  - Linux (Ubuntu, Fedora, Debian, Arch Linux, Manjaro, etc.)
 
 Please note that no additional installation is required. Just unzip and double-click!
 
