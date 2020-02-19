@@ -1,6 +1,12 @@
 .. Capybara documentation master file, created by
    sphinx-quickstart on Thu Sep 19 18:09:51 2019.
-
+   
+   
+.. meta::
+   :msvalidate.01: 00DE8CC6EEBE9941840E43A3686907F7
+   :google-site-verification: SEhBIjCGSQTdPVBknOqimgfKw1AVFhBf
+   
+   
 .. |EUCALPYT| image:: resources/eucalypt.png
    :height: 1em
    :target: http://eucalypt.gforge.inria.fr/
