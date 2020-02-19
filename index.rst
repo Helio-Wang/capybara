@@ -4,9 +4,9 @@
    
 .. meta::
    :msvalidate.01: 00DE8CC6EEBE9941840E43A3686907F7
-   :google-site-verification: SEhBIjCGSQTdPVBknOqimgfKw1AVFhBf
-   
-   
+   :google-site-verification: SEhBIjCGSQTdPVBknOqimgfKw1AVFhBf-rudiaTXWUE
+
+
 .. |EUCALPYT| image:: resources/eucalypt.png
    :height: 1em
    :target: http://eucalypt.gforge.inria.fr/
