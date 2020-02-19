@@ -24,12 +24,8 @@ from sphinx.locale import _
 from sphinx_rtd_theme import __version__
 
 
-# project = u'Quokka'
 slug = re.sub(r'\W+', '-', project.lower())
-# version = __version__
-# release = __version__
-# author = u'Helio Wang & contributors'
-# copyright = author
+
 
 extensions = [
     'sphinx.ext.intersphinx',
@@ -55,7 +51,8 @@ intersphinx_mapping = {
 
 html_theme = 'sphinx_rtd_theme'
 html_theme_options = {
-    'logo_only': True
+    'logo_only': True,
+    'analytics_id': 'UA-158769603-1'
 }
 html_theme_path = ["../.."]
 html_logo = "resources/logo.png"
