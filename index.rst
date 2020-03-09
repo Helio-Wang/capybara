@@ -44,8 +44,8 @@ The first issue arises because the optimal solutions are not always the ones bio
 Capybara addresses both of these problems in an efficient way. Furthermore, it includes a tool for visualizing the solutions that significantly helps the user in the process of analyzing the results.
 
 
-News
-----
+Features
+--------
 
 Capybara has some features in common with its predecessor |EUCALPYT| [1]_: counting the number of optimal reconciliations, listing optimal reconciliations to a file, keeping only the acyclic ones (the definition of cyclicity is taken from [2]_).
 
