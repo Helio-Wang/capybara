@@ -17,8 +17,35 @@ Welcome to Capybara's documentation!
 
 Capybara is a desktop application for solving the **Phylogenetic tree reconciliation problem**.
 
-Keywords: Cophylogeny reconstruction, phylogenetic tree reconciliationm, enumeration.
+**Keywords**: Cophylogeny reconstruction, phylogenetic tree reconciliationm, enumeration.
 
+
+.. toctree::
+   :caption: Documentation
+   :maxdepth: 2
+
+   installation
+   enumeration
+   suboptimal
+   visualization
+
+
+Overview
+--------
+
+**Phylogenetic tree reconciliation** is the method of choice in analyzing host-symbiont systems. Despite the many reconciliation tools that have been proposed in the literature, two main issues remain unresolved: 
+
+- listing **suboptimal** solutions (i.e., whose score is “close” to the optimal ones), and
+
+- listing only solutions that are **biologically different “enough”**. 
+
+The first issue arises because the optimal solutions are not always the ones biologically most significant; providing many suboptimal solutions as alternatives for the optimal ones is thus very useful. The second one is related to the difficulty to analyze an often huge number of optimal solutions.
+
+Capybara addresses both of these problems in an efficient way. Furthermore, it includes a tool for visualizing the solutions that significantly helps the user in the process of analyzing the results.
+
+
+News
+----
 
 Capybara has some features in common with its predecessor |EUCALPYT| [1]_: counting the number of optimal reconciliations, listing optimal reconciliations to a file, keeping only the acyclic ones (the definition of cyclicity is taken from [2]_).
 
@@ -35,16 +62,6 @@ Capybara also has some **exciting new features**:
 
 - Animated visualization of event partitions and equivalence classes (see :ref:`Output visualization`)
 
-
-
-.. toctree::
-   :caption: Documentation
-   :maxdepth: 2
-
-   installation
-   enumeration
-   suboptimal
-   visualization
 
 
 References
