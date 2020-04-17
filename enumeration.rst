@@ -88,7 +88,7 @@ the other buttons become available:
 
 .. Tip:: 
    - The file openning and saving dialogs have their own application-wide favorites list. 
-     The user can add a folder to favorites using drag and drop to have quicker access in the futur.
+     The user can add a folder to the favorites list using drag and drop to have quicker access in the future.
    - Not sure what an option means? Most buttons and boxes have help messages (tooltip). These will appear when the mouse cursor moves over an item. 
 
 Counting
