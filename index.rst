@@ -1,7 +1,3 @@
-.. Capybara documentation master file, created by
-   sphinx-quickstart on Thu Sep 19 18:09:51 2019.
-   
-   
 .. meta::
    :msvalidate.01: 00DE8CC6EEBE9941840E43A3686907F7
    :google-site-verification: SEhBIjCGSQTdPVBknOqimgfKw1AVFhBf-rudiaTXWUE
@@ -15,7 +11,9 @@
 Welcome to Capybara's documentation!
 =======================================
 
-Capybara is a desktop application for solving the **Phylogenetic tree reconciliation problem**.
+Capybara is a desktop **GUI application** for solving the *Phylogenetic tree reconciliation problem*.
+
+Its key features are also available as a **Python package**.
 
 **Keywords**: Cophylogeny reconstruction, phylogenetic tree reconciliationm, enumeration.
 
@@ -28,6 +26,7 @@ Capybara is a desktop application for solving the **Phylogenetic tree reconcilia
    enumeration
    suboptimal
    visualization
+   package
 
 
 Overview
@@ -62,6 +61,7 @@ Capybara also has some **exciting new features**:
 
 - Animated visualization of event partitions and equivalence classes (see :ref:`Output visualization`)
 
+The counting and enumeration features of Capybara's :ref:`Optimal enumeration` are also avaible as a :ref:`Python package`.
 
 
 References

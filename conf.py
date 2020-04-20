@@ -7,7 +7,7 @@
 # -- Project information -----------------------------------------------------
 
 project = 'Capybara'
-copyright = '2019, Hélio Wang'
+copyright = '2020, Hélio Wang'
 author = 'Hélio Wang'
 
 

@@ -1,0 +1,491 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Python package &mdash; Capybara  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Output visualization" href="visualization.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="enumeration.html">Optimal enumeration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="suboptimal.html">Suboptimal enumeration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="visualization.html">Output visualization</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Python package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#usage">Usage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#count-capybara-counter-run">Count: <code class="docutils literal notranslate"><span class="pre">capybara.counter.run</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#enumerate-capybara-enumerater-run">Enumerate: <code class="docutils literal notranslate"><span class="pre">capybara.enumerater.run</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#log-file">Log file</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#a-simple-example">A simple example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#multiprocessing-on-multiple-input-files">Multiprocessing on multiple input files</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Capybara</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Python package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/package.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="python-package">
+<span id="id1"></span><h1><a class="toc-backref" href="#id2">Python package</a><a class="headerlink" href="#python-package" title="Permalink to this headline">¶</a></h1>
+<div class="contents topic" id="table-of-contents">
+<p class="topic-title">Table of Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#python-package" id="id2">Python package</a><ul>
+<li><a class="reference internal" href="#installation" id="id3">Installation</a></li>
+<li><a class="reference internal" href="#usage" id="id4">Usage</a><ul>
+<li><a class="reference internal" href="#count-capybara-counter-run" id="id5">Count: <code class="docutils literal notranslate"><span class="pre">capybara.counter.run</span></code></a></li>
+<li><a class="reference internal" href="#enumerate-capybara-enumerater-run" id="id6">Enumerate: <code class="docutils literal notranslate"><span class="pre">capybara.enumerater.run</span></code></a></li>
+<li><a class="reference internal" href="#log-file" id="id7">Log file</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#examples" id="id8">Examples</a><ul>
+<li><a class="reference internal" href="#a-simple-example" id="id9">A simple example</a></li>
+<li><a class="reference internal" href="#multiprocessing-on-multiple-input-files" id="id10">Multiprocessing on multiple input files</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="installation">
+<span id="package-installation"></span><h2><a class="toc-backref" href="#id3">Installation</a><a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p>We strongly recommand installing the Capybara package only in virtual environments.</p>
+<p>First, install Pipenv if you don’t have it already:</p>
+<div class="code console highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">pipenv</span>
+</pre></div>
+</div>
+<p>Then, navigate to the project folder, create and activate a virtual environment:</p>
+<div class="code console highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">PATH</span><span class="o">-</span><span class="n">TO</span><span class="o">-</span><span class="n">THE</span><span class="o">-</span><span class="n">PROJECT</span><span class="o">-</span><span class="n">FOLDER</span>
+<span class="n">pipenv</span> <span class="n">install</span>
+<span class="n">pipenv</span> <span class="n">shell</span>
+</pre></div>
+</div>
+<p class="last">Once inside the virtual environment, follow the installation guide below.</p>
+</div>
+<p>Install the package <strong>capybara-cophylogeny</strong> via <code class="docutils literal notranslate"><span class="pre">pip</span></code>:</p>
+<div class="code console highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">capybara</span><span class="o">-</span><span class="n">cophylogeny</span>
+</pre></div>
+</div>
+<p>You can verify whether the installation is successful inside the Python interactive shell:</p>
+<div class="code console highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span>
+</pre></div>
+</div>
+<p>Import the two Capybara modules:</p>
+<div class="code console highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">capybara.counter</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">capybara.enumerator</span>
+</pre></div>
+</div>
+<p>The import statements should not yield any error.</p>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p>Be sure to update to the newest version if you have not used Capybara for a while:</p>
+<div class="code console last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">capybara</span><span class="o">-</span><span class="n">cophylogeny</span> <span class="o">--</span><span class="n">upgrade</span>
+</pre></div>
+</div>
+</div>
+<div class="admonition-improve-performance-with-pypy admonition">
+<p class="first admonition-title">Improve performance with PyPy</p>
+<p>You can <strong>speed up the computation</strong> by using PyPy3.6 instead of the standard CPython interpreters.
+To do this, follow these simple steps:</p>
+<ol class="arabic simple">
+<li><a class="reference external" href="https://www.pypy.org/download.html">Download and install PyPy3.6</a>.</li>
+<li>Create and activate the virtual environment using PyPy3 as interpreter:</li>
+</ol>
+<blockquote>
+<div><div class="code console highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pipenv</span> <span class="n">install</span> <span class="o">--</span><span class="n">python</span><span class="o">=</span><span class="n">pypy3</span>
+<span class="n">pipenv</span> <span class="n">shell</span>
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="last arabic" start="3">
+<li><p class="first">Already done! Python commands will now use PyPy3. For example, you can write:</p>
+<div class="code console highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">capybara</span><span class="o">-</span><span class="n">cophylogeny</span>
+<span class="n">python</span> <span class="n">MY_SCRIPT</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="section" id="usage">
+<h2><a class="toc-backref" href="#id4">Usage</a><a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<p>The user is assumed to be already familiar with the GUI version of Capybara.</p>
+<p>The Python package provides two functions <code class="docutils literal notranslate"><span class="pre">capybara.counter.run</span></code> and <code class="docutils literal notranslate"><span class="pre">capybara.enumerator.run</span></code>,
+corresponding to the two buttons <span class="guilabel">Count</span> and <span class="guilabel">Enumerate</span> in <a class="reference internal" href="enumeration.html#optimal-enumeration"><span class="std std-ref">Optimal enumeration</span></a>.</p>
+<div class="section" id="count-capybara-counter-run">
+<h3><a class="toc-backref" href="#id5">Count: <code class="docutils literal notranslate"><span class="pre">capybara.counter.run</span></code></a><a class="headerlink" href="#count-capybara-counter-run" title="Permalink to this headline">¶</a></h3>
+<p>The function takes 4 parameters (2 optional):</p>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head stub">Parameters</th>
+<th class="head">&#160;</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><th class="stub">input_name</th>
+<td>Name of the input file (or the path)</td>
+</tr>
+<tr class="row-odd"><th class="stub">task</th>
+<td>Integer between 1 and 4</td>
+</tr>
+<tr class="row-even"><th class="stub">cost_vector</th>
+<td>List (or tuple) of four integers. <strong>Default</strong>: (-1,1,1,1)</td>
+</tr>
+<tr class="row-odd"><th class="stub">verbose</th>
+<td>If set to True, print a message when the computation starts and ends. <strong>Default</strong>: False</td>
+</tr>
+</tbody>
+</table>
+<p>The function returns an integer, depending on the chosen task (see also <a class="reference internal" href="enumeration.html#enumeration-tasks"><span class="std std-ref">Definitions of tasks</span></a>):</p>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head stub">&#160;</th>
+<th class="head">Return value</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><th class="stub">task=1</th>
+<td>Number of optimal reconciliations</td>
+</tr>
+<tr class="row-odd"><th class="stub">task=2</th>
+<td>Number of event vectors</td>
+</tr>
+<tr class="row-even"><th class="stub">task=3</th>
+<td>Number of event partitions</td>
+</tr>
+<tr class="row-odd"><th class="stub">task=4</th>
+<td>Number of equivalence classes</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="enumerate-capybara-enumerater-run">
+<h3><a class="toc-backref" href="#id6">Enumerate: <code class="docutils literal notranslate"><span class="pre">capybara.enumerater.run</span></code></a><a class="headerlink" href="#enumerate-capybara-enumerater-run" title="Permalink to this headline">¶</a></h3>
+<p>The function takes 7 parameters (4 optional):</p>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head stub">Parameters</th>
+<th class="head">&#160;</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><th class="stub">input_name</th>
+<td>Name of the input file (or the path)</td>
+</tr>
+<tr class="row-odd"><th class="stub">output_name</th>
+<td>Name of the output file (or the path)</td>
+</tr>
+<tr class="row-even"><th class="stub">task</th>
+<td>Integer between 1 and 4</td>
+</tr>
+<tr class="row-odd"><th class="stub">cost_vector</th>
+<td>List (or tuple) of four integers. Default: (-1,1,1,1)</td>
+</tr>
+<tr class="row-even"><th class="stub">verbose</th>
+<td>If set to True, print a message when the computation starts and ends. <strong>Default</strong>: False</td>
+</tr>
+<tr class="row-odd"><th class="stub">maximum</th>
+<td>Maximum number of solutions to be outputted. <strong>Default</strong>: Infinity</td>
+</tr>
+<tr class="row-even"><th class="stub">acyclic_only</th>
+<td>If set to True and task=1, output only acyclic solutions. <strong>Default</strong>: False</td>
+</tr>
+</tbody>
+</table>
+<p>The function does not return anything. It writes the output to the specified file, depending on the chosen task (see <a class="reference internal" href="enumeration.html#enumeration-tasks"><span class="std std-ref">Definitions of tasks</span></a>).
+The output format is the same as in the GUI version.</p>
+<p>For tasks 3 and 4, the output format corresponds to the option <strong>Labels only</strong> in the GUI version (see <a class="reference internal" href="enumeration.html#output-options"><span class="std std-ref">Options for tasks T3 and T4</span></a>).</p>
+</div>
+<div class="section" id="log-file">
+<h3><a class="toc-backref" href="#id7">Log file</a><a class="headerlink" href="#log-file" title="Permalink to this headline">¶</a></h3>
+<p>With the option <strong>verbose</strong>, only simple messages are printed to the console, at the start and the end of computation.</p>
+<p>More detailed information (parameters used, time of computation, cause of error) can be found in the log file <strong>capybara.log</strong> in the working directory.</p>
+<p>After a successful job, the user can find messages similar to the following at the end of the log file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>2020-04-19 21:50:05,131 - capybara - INFO - ===== Job started! =====
+2020-04-19 21:50:05,131 - capybara - INFO - Running Capybara Counter Task 2
+2020-04-19 21:50:05,132 - capybara - INFO - Input file: /home/user/cophy/data/input1.nex
+2020-04-19 21:50:05,132 - capybara - INFO - Cost vector: (0, 1, 1, 1)
+2020-04-19 21:50:05,133 - capybara - INFO - Reading the input file...
+2020-04-19 21:50:05,134 - capybara - INFO - Successful! Computing...
+2020-04-19 21:50:05,162 - capybara - INFO - Done! The result of Counter Task 2 is 8
+2020-04-19 21:50:05,166 - capybara - INFO - ===== Job finished successfully! =====
+</pre></div>
+</div>
+<p>A job interrupted by the user (for example, by pressing Ctrl+C) is also shown in the log file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>2020-04-19 22:04:11,600 - capybara - INFO - ===== Job started! =====
+2020-04-19 22:04:11,600 - capybara - INFO - Running Capybara Enumerator Task 4
+2020-04-19 22:04:11,601 - capybara - INFO - Input file: /home/user/cophy/data/input1.nex
+2020-04-19 22:04:11,601 - capybara - INFO - Cost vector: (0, 1, 1, 1)
+2020-04-19 22:04:11,601 - capybara - INFO - Output file: /home/user/cophy/input1-classes.txt
+2020-04-19 22:04:11,601 - capybara - INFO - Reading the input file...
+2020-04-19 22:04:11,602 - capybara - INFO - Successful! Computing...
+2020-04-19 22:04:11,604 - capybara - WARNING - Keyboard interrupt
+2020-04-19 22:04:11,604 - capybara - INFO - ===== Job aborted! =====
+</pre></div>
+</div>
+<p>The log file is automatically cleaned after 48 hours.</p>
+</div>
+</div>
+<div class="section" id="examples">
+<h2><a class="toc-backref" href="#id8">Examples</a><a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="a-simple-example">
+<h3><a class="toc-backref" href="#id9">A simple example</a><a class="headerlink" href="#a-simple-example" title="Permalink to this headline">¶</a></h3>
+<p>Here is a simple script where we print the number of event vectors, for different cost vectors:</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">cost_vector</span> <span class="ow">in</span> <span class="p">[(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">)]:</span>
+    <span class="n">num_vectors</span> <span class="o">=</span> <span class="n">capybara</span><span class="o">.</span><span class="n">counter</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s1">&#39;input.nex&#39;</span><span class="p">,</span> <span class="n">task</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">cost_vector</span><span class="o">=</span><span class="n">cost_vector</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Cost vector =&quot;</span><span class="p">,</span> <span class="n">cost_vector</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Number of event vectors =&quot;</span><span class="p">,</span> <span class="n">num_vectors</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="multiprocessing-on-multiple-input-files">
+<h3><a class="toc-backref" href="#id10">Multiprocessing on multiple input files</a><a class="headerlink" href="#multiprocessing-on-multiple-input-files" title="Permalink to this headline">¶</a></h3>
+<p>The user may want to use <strong>more than one CPU unit</strong> when working with a large number of files.</p>
+<p>We propose below a script that uses <strong>multiprocessing</strong>. It follows three steps:</p>
+<ul class="simple">
+<li>Define a function that applies <code class="docutils literal notranslate"><span class="pre">capybara.enumerator.run</span></code> with parameters <em>task=4</em> and <em>cost_vector=(0,1,1,1)</em>
+on the given input file.
+The output file name is obtained by <strong>adding a suffix</strong> “0111_classes” to the input file name.</li>
+<li>Get the list of all input files, located in the directory <strong>data/</strong>.</li>
+<li>Create a pool of 4 worker processes, and apply the function on the list of input files.</li>
+</ul>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">from</span> <span class="nn">multiprocessing</span> <span class="kn">import</span> <span class="n">Pool</span>
+<span class="kn">import</span> <span class="nn">capybara.enumerator</span>
+
+<span class="c1"># define my custom function</span>
+<span class="k">def</span> <span class="nf">my_function</span><span class="p">(</span><span class="n">input_name</span><span class="p">):</span>
+    <span class="n">output_name</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">{name}</span><span class="s1">_</span><span class="si">{suffix}</span><span class="s1">.txt&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">input_name</span><span class="p">)[</span><span class="mi">0</span><span class="p">],</span>
+                                               <span class="n">suffix</span><span class="o">=</span><span class="s1">&#39;0111_classes&#39;</span><span class="p">)</span>
+    <span class="n">capybara</span><span class="o">.</span><span class="n">enumerator</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">input_name</span><span class="p">,</span> <span class="n">output_name</span><span class="p">,</span> <span class="n">task</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">cost_vector</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
+
+<span class="c1"># getting all .nex files in the data folder</span>
+<span class="n">nexfiles</span> <span class="o">=</span> <span class="p">[</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="n">fname</span><span class="p">)</span> <span class="k">for</span> <span class="n">fname</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">)</span>
+                                        <span class="k">if</span> <span class="n">fname</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;.nex&#39;</span><span class="p">)]</span>
+
+<span class="c1"># apply the function to the list of files</span>
+<span class="k">with</span> <span class="n">Pool</span><span class="p">(</span><span class="n">processes</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span> <span class="k">as</span> <span class="n">pool</span><span class="p">:</span>
+  <span class="n">pool</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">my_function</span><span class="p">,</span> <span class="n">nexfiles</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="visualization.html" class="btn btn-neutral float-left" title="Output visualization" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Hélio Wang
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    <!-- Theme Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-158769603-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+
+    
+   
+
+</body>
+</html>
