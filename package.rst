@@ -169,7 +169,8 @@ The function takes 7 parameters (4 optional):
 
 
 The function does not return anything. It writes the output to the specified file, depending on the chosen task (see :ref:`Enumeration tasks`).
-The output format is the same as in the GUI version.
+
+The output format is the same as in the GUI version, except for task 2: it only enumerates the event vectors, not one reconciliation per event vector.
 
 For tasks 3 and 4, the output format corresponds to the option **Labels only** in the GUI version (see :ref:`Output options`).
 
