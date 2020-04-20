@@ -72,7 +72,7 @@ The import statements should not yield any error.
    You can **speed up the computation** by using PyPy3.6 instead of the standard CPython interpreters.
    To do this, follow these simple steps:
 
-   1. `Download and install PyPy3.6 <https://www.pypy.org/download.html>`__.
+   1. `Download and install PyPy3.6 <https://www.pypy.org/download.html#python-3-6-compatible-pypy3-6-v7-3-1>`__.
 
    2. Create and activate the virtual environment using PyPy3 as interpreter:
 
