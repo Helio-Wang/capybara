@@ -257,7 +257,7 @@ We propose below a script that uses **multiprocessing**. It follows three steps:
 
     # apply the function to the list of files
     with Pool(processes=4) as pool:
-      pool.map(my_function, nexfiles)
+        pool.map(my_function, nexfiles)
 
 
 
