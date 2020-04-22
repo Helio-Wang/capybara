@@ -205,7 +205,7 @@ A job interrupted by the user (for example, by pressing Ctrl+C) is also shown in
     2020-04-19 22:04:11,604 - capybara - WARNING - Keyboard interrupt
     2020-04-19 22:04:11,604 - capybara - INFO - ===== Job aborted! =====
 
-The log file is automatically cleaned after 48 hours.
+The log file is automatically cleaned after 48 hours (the old file is renamed as capybara.log.CREATION-DATE).
 
 
 Examples
