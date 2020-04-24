@@ -184,26 +184,26 @@ More detailed information (parameters used, time of computation, cause of error)
 
 After a successful job, the user can find messages similar to the following at the end of the log file: ::
 
-    2020-04-19 21:50:05,131 - capybara - INFO - ===== Job started! =====
-    2020-04-19 21:50:05,131 - capybara - INFO - Running Capybara Counter Task 2
-    2020-04-19 21:50:05,132 - capybara - INFO - Input file: /home/user/cophy/data/input1.nex
-    2020-04-19 21:50:05,132 - capybara - INFO - Cost vector: (0, 1, 1, 1)
-    2020-04-19 21:50:05,133 - capybara - INFO - Reading the input file...
-    2020-04-19 21:50:05,134 - capybara - INFO - Successful! Computing...
-    2020-04-19 21:50:05,162 - capybara - INFO - Done! The result of Counter Task 2 is 8
-    2020-04-19 21:50:05,166 - capybara - INFO - ===== Job finished successfully! =====
+    2020-04-19 21:50:05,131 - 448c175a865711ea8496b8ca3aced137 - INFO - ===== Job started! =====
+    2020-04-19 21:50:05,131 - 448c175a865711ea8496b8ca3aced137 - INFO - Running Capybara Counter Task 2
+    2020-04-19 21:50:05,132 - 448c175a865711ea8496b8ca3aced137 - INFO - Input file: /home/user/cophy/data/input1.nex
+    2020-04-19 21:50:05,132 - 448c175a865711ea8496b8ca3aced137 - INFO - Cost vector: (0, 1, 1, 1)
+    2020-04-19 21:50:05,133 - 448c175a865711ea8496b8ca3aced137 - INFO - Reading the input file...
+    2020-04-19 21:50:05,134 - 448c175a865711ea8496b8ca3aced137 - INFO - Successful! Computing...
+    2020-04-19 21:50:05,162 - 448c175a865711ea8496b8ca3aced137 - INFO - Done! The result of Counter Task 2 is 8
+    2020-04-19 21:50:05,166 - 448c175a865711ea8496b8ca3aced137 - INFO - ===== Job finished successfully! =====
 
 A job interrupted by the user (for example, by pressing Ctrl+C) is also shown in the log file: ::
 
-    2020-04-19 22:04:11,600 - capybara - INFO - ===== Job started! =====
-    2020-04-19 22:04:11,600 - capybara - INFO - Running Capybara Enumerator Task 4
-    2020-04-19 22:04:11,601 - capybara - INFO - Input file: /home/user/cophy/data/input1.nex
-    2020-04-19 22:04:11,601 - capybara - INFO - Cost vector: (0, 1, 1, 1)
-    2020-04-19 22:04:11,601 - capybara - INFO - Output file: /home/user/cophy/input1-classes.txt
-    2020-04-19 22:04:11,601 - capybara - INFO - Reading the input file...
-    2020-04-19 22:04:11,602 - capybara - INFO - Successful! Computing...
-    2020-04-19 22:04:11,604 - capybara - WARNING - Keyboard interrupt
-    2020-04-19 22:04:11,604 - capybara - INFO - ===== Job aborted! =====
+    2020-04-19 22:04:11,600 - 448c175a865711ea8496b8ca3aced137 - INFO - ===== Job started! =====
+    2020-04-19 22:04:11,600 - 448c175a865711ea8496b8ca3aced137 - INFO - Running Capybara Enumerator Task 4
+    2020-04-19 22:04:11,601 - 448c175a865711ea8496b8ca3aced137 - INFO - Input file: /home/user/cophy/data/input1.nex
+    2020-04-19 22:04:11,601 - 448c175a865711ea8496b8ca3aced137 - INFO - Cost vector: (0, 1, 1, 1)
+    2020-04-19 22:04:11,601 - 448c175a865711ea8496b8ca3aced137 - INFO - Output file: /home/user/cophy/input1-classes.txt
+    2020-04-19 22:04:11,601 - 448c175a865711ea8496b8ca3aced137 - INFO - Reading the input file...
+    2020-04-19 22:04:11,602 - 448c175a865711ea8496b8ca3aced137 - INFO - Successful! Computing...
+    2020-04-19 22:04:11,604 - 448c175a865711ea8496b8ca3aced137 - WARNING - Keyboard interrupt
+    2020-04-19 22:04:11,604 - 448c175a865711ea8496b8ca3aced137 - INFO - ===== Job aborted! =====
 
 The log file is automatically cleaned after 48 hours (the old file is renamed as capybara.log.CREATION-DATE).
 
