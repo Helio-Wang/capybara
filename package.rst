@@ -217,6 +217,7 @@ A simple example
 Here is a simple script where we print the number of event vectors, for different cost vectors:
 
 .. code:: python
+
     import capybara.counter
 
     for cost_vector in [(-1,1,1,1), (0,1,1,1), (0,1,1,0), (0,2,3,1)]:
