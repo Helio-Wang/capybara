@@ -17,6 +17,10 @@ Its key features are also available as a **Python package**.
 
 **Keywords**: Cophylogeny reconstruction, phylogenetic tree reconciliationm, enumeration.
 
+To cite Capyabra: 
+
+Yishu Wang, Arnaud Mary, Marie-France Sagot, Blerina Sinaimeri, Capybara: equivalence ClAss enumeration of coPhylogenY event-BAsed ReconciliAtions, *Bioinformatics*, Volume 36, Issue 14, 15 July 2020, Pages 4197–4199, doi: 10.1093/bioinformatics/btaa498.
+
 
 .. toctree::
    :caption: Documentation
