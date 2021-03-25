@@ -69,10 +69,10 @@ The import statements should not yield any error.
 
 .. admonition:: Improve performance with PyPy
 
-   You can **speed up the computation** by using PyPy3.6 instead of the standard CPython interpreters.
+   You can **speed up the computation** by using PyPy3 instead of the standard CPython interpreters.
    To do this, follow these simple steps:
 
-   1. `Download and install PyPy3.6 <https://www.pypy.org/download.html>`__.
+   1. `Download and install PyPy3 <https://www.pypy.org/download.html>`__.
 
    2. Create and activate the virtual environment using PyPy3 as interpreter:
 
