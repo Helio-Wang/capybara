@@ -51,14 +51,14 @@ into three subsets: cospeciation, duplicaiton, and host-switch nodes.
 Two reconciliations have the same event partitions if, for each node in the symbiont tree,
 the assigned events (cospeciation, duplication, host-switch) are the same, regardless of the hosts.
 
-Task T4: Equivalence classes
-----------------------------
+Task T4: Cospeciation-Duplication Equivalence classes
+-----------------------------------------------------
 
 :guilabel:`Count`: number of equivalence classes in **S**.
 
 :guilabel:`Enumerate`: all equivalence classes in **S**.
 
-Two reconciliations are considered **equivalent** if, for each node in the symbiont tree,
+Two reconciliations are considered **CD-equivalent** if, for each node in the symbiont tree,
 the assigned events (cospeciation, duplication, host-switch) are the same, moreover, the assigned hosts
 are also the same except when the event is a host-switch.
 
@@ -126,7 +126,7 @@ Here is the output of all four counting tasks on the :download:`example input <r
     Task 3: Counting the number of event partitions...
     Total number of event partitions = 4
     ------
-    Task 4: Counting the number of strong equivalence classes...
+    Task 4: Counting the number of CD equivalence classes...
     Total number of strong equivalence classes = 4
     ------
     Optimal cost = 1.0
@@ -190,13 +190,13 @@ There are two output types:
 
    **Task T3**: Each event partition is represented by the assignment, to each internal symbiont node, of one of the three events.
 
-   **Task T4**: Each equivalence class is represented by the assignment, to each internal symbiont node, of one of the three events, and the assignment of a host hame to each symbiont node with non-host-switch event.
+   **Task T4**: Each CD-equivalence class is represented by the assignment, to each internal symbiont node, of one of the three events, and the assignment of a host hame to each symbiont node with non-host-switch event.
 
 **Reconciliation**
 
    If the second output type `"reconciliation"` is chosen, the result will be compatible with the `the original viewer <http://eucalypt.gforge.inria.fr/viewer.html>`__ for |eucalpyt|. 
 
-   Note that in this case, the output is only one reconciliation chosen arbitrarily among the potentially many (cyclic or acyclic) reconciliations having the same event partition or belonging in the same equivalence class.
+   Note that in this case, the output is only one reconciliation chosen arbitrarily among the potentially many (cyclic or acyclic) reconciliations having the same event partition or belonging in the same CD-equivalence class.
 
 .. _new visualization tool Capybara Viewer: visualization.html
 
